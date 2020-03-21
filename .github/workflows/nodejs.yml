@@ -27,8 +27,8 @@ jobs:
     - run: npm test
 #    - run: sshpass -p "test-ci" scp -r . test-ci@49.172.17.47:/home/test-ci/test-app/
     - run: sudo apt-get install -y sshpass
-    - run: scp -v
-    - run: sshpass -v
+    - run: sshpass -p "test-ci" ssh test-ci@49.172.17.47 chmod +x /home/test-ci/test-app/clone.sh
+    - run: sshpass -p "test-ci" ssh test-ci@49.172.17.47 /home/test-ci/test-app/clone.sh 
     - run: sshpass -p "test-ci" scp -r * test-ci@49.172.17.47:~/
 #    - run: sshpass -p "test-ci" scp -r * test-ci@49.172.17.47:/home/test-ci/test-app/
       env:
