@@ -9,5 +9,5 @@ const app = new Express();
 app.get('/', (req, res) => res.send('Hello Express!'));
 
 
-app.listen(3000, () => console.log('server is started on port 3000'));
+app.listen(3000, '0.0.0.0', () => console.log('server is started on port 3000'));
 
