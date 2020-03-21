@@ -1,0 +1,17 @@
+{
+  "name": "github-action-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha calc.spec.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mocha": "^7.1.1",
+    "should": "^13.2.3"
+  }
+}
