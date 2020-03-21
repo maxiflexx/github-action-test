@@ -27,7 +27,7 @@ jobs:
     - run: npm test
 #    - run: sshpass -p "test-ci" scp -r . test-ci@49.172.17.47:/home/test-ci/test-app/
     - run: sudo apt-get install -y sshpass
-    - run: sshpass -p "test-ci" scp -r * test-ci@49.172.17.47:/home/test-ci/test-app
+    - run: sshpass -p "test-ci" scp -r * test-ci@49.172.17.47:~/
 #    - run: sshpass -p "test-ci" scp -r * test-ci@49.172.17.47:/home/test-ci/test-app/
       env:
         CI: true
