@@ -25,6 +25,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm test
-    - run: ls
+    - run: sshpass -p "test-ci" scp -r * test-ci@49.172.17.47:/home/test-ci/test-app/
       env:
         CI: true
