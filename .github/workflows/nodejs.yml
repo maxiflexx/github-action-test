@@ -26,6 +26,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm test
 #    - run: sshpass -p "test-ci" scp -r . test-ci@49.172.17.47:/home/test-ci/test-app/
+    - run: apt install sshpass
     - run: sshpass -p'test-ci' ssh test-ci@49.172.17.47 git clone https://github.com/maxiflexx/github-action-test.git /home/test-ci/test-app
 #    - run: sshpass -p "test-ci" scp -r * test-ci@49.172.17.47:/home/test-ci/test-app/
       env:
